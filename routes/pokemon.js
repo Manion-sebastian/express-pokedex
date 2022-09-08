@@ -16,7 +16,12 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req,res) => {
   try {
-    await db.pokemon.create(req.body)
+    // await db.pokemon.create(req.body)
+    await db.pokemon.findOrCreate({
+      where: {
+        name: req.body.name
+      }
+    })
     res.redirect('/pokemon')
   } catch(err) {
     console.warn(err)
