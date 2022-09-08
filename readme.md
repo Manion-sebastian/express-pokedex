@@ -48,6 +48,8 @@ Your first step will be to create a SQL database for your application. Recall th
 
 #### Part 2: Create your Pokemon Model and Table
 
+sequelize model:create --name pokemon --attributes name:string
+
 Our data model needs only one attribute: `name`.
 
 1. Use the `sequelize model:create` command to make the `pokemon` model. This creates both the model JS and the migration JS files.
